@@ -1,1 +1,27 @@
-<p>Hello</p>
+<div>
+  <h1>Users Page</h1>
+
+  <div class="table-container">
+
+    <table>
+      <tr>
+        <th>Name</th>
+      </tr>
+      <% for user in @users %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><form action="/users/<%= user.id%>">
+          <input type="submit" value="View User"/>
+        </form></td>
+      </tr>
+
+
+      <% end %>
+    </table>
+  </div>
+
+  <form class="button-forms" method ="get" action="/users/new">
+    <input type="submit" value="New User"/>
+  </form>
+
+</div>

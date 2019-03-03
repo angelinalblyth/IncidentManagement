@@ -1,0 +1,46 @@
+j<h1> Add a new incident</h1>
+
+<form method = "POST" action ="/issues">
+
+  <div class ="form_space">
+    <label for ="user">
+      Select a user:
+    <select class="user" name="user_id">
+      <% for user in @users %>
+      <option value="<%= user.id %>"><%= user.name %></option>
+      <% end %>
+    </select>
+    <input class="new_form" id ="date" type="text" name = "date" />
+    <br />
+  </div>
+
+  <div class ="form_space">
+    <label for ="date">Date:</label>
+    <input class="new_form" id ="date" type="text" name = "date" />
+    <br />
+  </div>
+
+  <div class ="form_space">
+    <label for ="time">Time:</label>
+    <input class="new_form" id = "time" type="text" name ="time"  />
+    <br />
+  </div>
+
+  <div class ="form_space">
+    <label for ="teacher">Incident Type:</label>
+    <input class="new_form" id = "<inci></inci>" type="text" name ="incidentType"  />
+    <br />
+  </div>
+
+  <div class ="form_space">
+    <label for="duration">Description:</label>
+    <input class="new_form" id ="description" type ="text" name="description" />
+    <br />
+  </div>
+
+
+
+  <input class = "new" type="submit" value"Submit New Incident" />
+  <br />
+
+</form>

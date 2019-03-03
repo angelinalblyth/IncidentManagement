@@ -1,0 +1,27 @@
+<h1 style="text-align:left; padding-left: 3%;"><%= @user.name %>'s Profile</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+  <tr>
+    <td>
+      <%= @user.name %>
+    </td>
+  </tr>
+</table>
+<div class="show_member_btn">
+  <form class ="show_member_form" action="/users/<%= @user.id %>/edit">
+    <input class ="show_member_input" type="submit" value="Edit Member"/>
+  </form>
+
+  <form class ="show_user_form" method="post" action="/users/<%= @user.id %>/delete">
+    <input class ="show_user_input" type="submit" value="Delete User"/>
+  </form>
+
+  <form  class ="show_user_form" action="/users/<%= @user.id %>/incidents">
+    <input class ="show_user_input" type="submit" value="View Incidents"/>
+  </form>
+
+</div>

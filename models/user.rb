@@ -48,6 +48,13 @@ class User
   sql = "SELECT * FROM users"
   results = SqlRunner.run(sql)
   return results.map { |user| User.new(user)}
-end
+  end
+
+  def update()
+    sql = "UPDATE users SET (name) = ($1)
+      WHERE id = $1"
+      values = [@name, @id]
+      SqlRunner.run(sql, values)
+  end
 
 end

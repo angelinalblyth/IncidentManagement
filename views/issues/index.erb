@@ -1,1 +1,37 @@
-<h2>Hello</h2>
+<div>
+  <h1>Incidents Page</h1>
+
+<div class = "table-container">
+
+  <table>
+    <tr>
+      <th>User</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Incident Type</th>
+      <th>Description</th>
+    </tr>
+    <% for issue in @issues %>
+    <tr>
+      <td><%= issue.user_id %></td>
+      <td><%= issue.date %></td>
+      <td><%= issue.time %></td>
+      <td><%= issue.incidentType %></td>
+      <td><%= issue.description %></td>
+      <td>
+        <form action="/issues/<%= issue.id%>">
+          <input type="submit" value="View Issue"/>
+        </form>
+      </td>
+    </tr>
+
+    <% end %>
+  </table>
+
+  </div>
+  <form class="button-forms" method ="get" action="/issues/new">
+    <input type="submit" value="New Issue"/>
+  </form>
+
+
+</div>
