@@ -1,0 +1,67 @@
+* {
+  box-sizing: borderbox;
+}
+
+body{
+  background-color: ##FFFFFF;
+  color: #9ACDFB;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+h1{
+  color: #4A89C5;
+  text-align:center;
+  text-shadow: 5px 5px #9ACDFB;
+  font-size: 5em;
+}
+
+#showpage{
+  text-align:left;
+}
+
+
+
+/* Boxes */
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.container > div {
+  display: flex;
+  flex-basis: calc(50%  40px);
+  flex-direction: column;
+}
+.container > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.box {
+  margin: 20px;
+}
+
+
+.responsive{
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+figcaption{
+  color: white;
+  text-align: center;
+}
+
+.box a{
+  text-decoration: none;
+}
