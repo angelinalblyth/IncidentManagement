@@ -1,0 +1,36 @@
+<h1>Update Issue</h1>
+
+<div style="margin: 5%;">
+
+  <form method = "POST" action="/issues/<%= @issue.id%>">
+
+    <div class ="form_space">
+      <label for ="date-field">Date:</label>
+      <input class="new_form" type ="date" name ="date" id="date-field" value ="<%= @issue.date %>" />
+      <br />
+    </div>
+    <div class ="form_space">
+      <label for="time-field">time:</label>
+      <input class="new_form" type="text" name="time" id="time-field" value="<%= @issue.time %>" />
+      <br />
+    </div>
+    <div class ="form_space">
+      <label for="incidentType-field">incidentType:</label>
+      <input class="new_form" type="text" name="incidentType" id="incidentType-field" value="<%= @issue.incidentType %>" />
+      <br />
+    </div>
+    <div class ="form_space">
+      <label for="user_id-field">user_id: £</label>
+      <input class="new_form" type="number" name="user_id" id="user_id-field" value="<%= @issue.user_id %>" />
+      <br />
+    </div>
+    <div class ="form_space">
+      <label for="duration-field"> Duration:</label>
+      <input class="new_form" type="text" name="duration" id="duration-field" value="<%= @issue.description %>" />
+      <br />
+    </div>
+    <input type="submit" value="Edit Issue" />
+
+  </form>
+
+</div>

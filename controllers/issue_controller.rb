@@ -32,13 +32,13 @@ end
 #edit
 get '/issues/:id/edit' do
   @issue = Issue.find(params[:id])
-  erb(:"issue/edit")
+  erb(:"issues/edit")
 end
 
 #update
 post '/issues/:id' do
-  Issue.new(params).update
-  redirect to "/issue/#{params['id']}"
+  Issue.new(params).update()
+  redirect to "/issues/#{params['id']}"
 end
 
 #delete

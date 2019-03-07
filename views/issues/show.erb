@@ -1,1 +1,46 @@
-<h2>whatsup</h2>
+<h1 style="text-align:left; padding-left: 3%;"><%= @issue.incidentType %></h1>
+
+
+<table>
+  <tr>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td><%= @issue.description %></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+
+    <th>Date</th>
+    <th>Time</th>
+    <th>incidentType</th>
+    <th>Raised By</th>
+    <th>Description</th>
+
+  </tr>
+
+  <tr>
+
+    <td><%= @issue.date %></td>
+    <td>£<%= @issue.time %></td>
+    <td><%= @issue.incidentType %> mins</td>
+    <td><%= @issue.user_id %></td>
+    <td><%= @issue.description %></td>
+
+  </tr>
+</table>
+
+<div class="show_issue_btn">
+
+  <form  class ="show_issue_form" action="/issues/<%= @issue.id %>/edit">
+    <input class ="show_issue_input" type="submit" value="Edit Issue" class="boxing-buttons"/>
+  </form>
+
+  <form class ="show_issue_form" method="post" action="/issues/<%= @issue.id %>/delete">
+    <input class ="show_issues_input" type="submit" value="Delete Issue"/>
+  </form>
+
+</div>

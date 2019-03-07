@@ -53,10 +53,9 @@ class Issue
   end
 
   def update()
-    sql = "UPDATE issues SET(user_id, date, time, incidentType, description) = ($1, $2, $3, $4, $5) WHERE id = $6"
-    values = [@user_id, @date, @time, @incidentType, @description]
-    SqlRunner.run(sql, values)
-  end
-
+     sql = "UPDATE issues SET (user_id, date, time, incidentType, description) = ($1, $2, $3, $4, $5) WHERE id = $6"
+     values = [@user_id, @date, @time, @incidentType, @description, @id]
+     SqlRunner.run(sql, values)
+   end
 
 end

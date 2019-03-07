@@ -36,11 +36,10 @@ get '/users/:id/edit' do
 end
 
 #update
-# post '/users/:id' do
-#   @user = User.new(params)
-#   @user.update()
-#   redirect to '/users/#{params['id']}'
-# end
+post '/users/:id' do
+  User.new(params).update()
+  redirect to "/users/#{params['id']}"
+end
 
 #delete
 post '/users/:id/delete' do
